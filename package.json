@@ -1,0 +1,15 @@
+{
+  "name": "20-stu_inquirer-users",
+  "version": "1.0.0",
+  "description": "Work with a partner to implement the following user story:",
+  "main": "index.js",
+  "scripts": {
+    "test": "i"
+  },
+  "keywords": [],
+  "author": "Tim Salamatin",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
