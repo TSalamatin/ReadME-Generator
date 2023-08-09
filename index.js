@@ -121,7 +121,7 @@ ${data.description}
 
     Github: https://github.com/${data.GithubName}
 
-    Email: ${data.email}
+    Email: [${data.email}](mailto:${data.email})
     `
 
         , (err) => err ? console.error(err) : console.log('Logged')
