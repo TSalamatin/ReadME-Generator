@@ -66,67 +66,57 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
+    const badge = getBadge(data);
 
-    let badge = getBadge(data)
-    //Start by appending the name
-    fs.writeFile(fileName, `# ${data.title}
-`
-+ badge
-+ `
+    const readmeContent = `# ${data.title}
+${badge}
 
 ## Description
-    
+
 ${data.description}
 
 ## Table of Contents
-    
-   
-    
+
 - [Installation Instructions](#installation-instructions)
-
 - [Usage Information](#usage-information)
-
 - [Credits](#credits)
-
 - [License](#license)
-
 - [Tests](#tests)
+- [Contact](#contact)
 
-- [My Links](#contact)
+## Installation Instructions
 
-    
-#Installation Instructions
-    
-    ${data.installation}
-    
-#Usage Information
-    
-    ${data.usage} 
-    
-#Credits
-    
-    ${data.contributtion}
-    
-#License
-    
-    This application is covered under
-    ${data.license}
-    
-        
-#Tests
-    
-    ${data.testing}
-    
-#Contact
+${data.installation}
 
-    Github: https://github.com/${data.GithubName}
+## Usage Information
 
-    Email: [${data.email}](mailto:${data.email})
-    `
+${data.usage}
 
-        , (err) => err ? console.error(err) : console.log('Logged')
+## Credits
 
-    )
+${data.contribution}
+
+## License
+
+This application is covered under ${data.license}
+
+## Tests
+
+${data.testing}
+
+## Contact
+
+- Github: [${data.GithubName}](https://github.com/${data.GithubName})
+- Email: [${data.email}](mailto:${data.email})
+`;
+
+    fs.writeFile(fileName, readmeContent, (err) => {
+        if (err) {
+            console.error(err);
+        } else {
+            console.log('README file has been generated successfully.');
+        }
+    });
 }
 
 
@@ -134,7 +124,7 @@ ${data.description}
 function init() {
     inquirer.prompt(questions)
         .then((response) =>
-            writeToFile('ExampleREADME.md', response)
+            writeToFile('README.md', response)
         )
 }
 
