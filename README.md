@@ -1,7 +1,6 @@
 # Test Title
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
-![Untitled_ Sep 26, 2023 10_44 PM](https://github.com/TSalamatin/ReadME-Generator/assets/128180862/ea0b0d75-4c3a-48be-a2e0-5971bfc2db9d)
 
 ## Description
 
