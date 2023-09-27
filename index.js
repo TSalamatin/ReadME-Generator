@@ -134,7 +134,7 @@ ${data.description}
 function init() {
     inquirer.prompt(questions)
         .then((response) =>
-            writeToFile('README.md', response)
+            writeToFile('ExampleREADME.md', response)
         )
 }
 
